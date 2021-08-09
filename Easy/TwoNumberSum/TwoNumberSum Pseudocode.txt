@@ -1,0 +1,10 @@
+Pseudocode:
+
+1. initialize two pointers, one at the beginning and one at the end
+2. sum up the pointer's elements
+3. check if the result is equal to the targetSum
+4. if equal, return the value of both pointers.
+5. If the sum of the two pointer's elements is less than the targetSum,
+   increase the start pointer and repeat process 2 - 4.
+6. If the sum of the two pointer's elements is greater than the targetSum,
+   decrease the end pointer and repeat process 2 - 4.
