@@ -16,7 +16,7 @@ def binarySearch(array, target):
 
 
 arr = [0, 1, 21, 33, 45, 45, 61, 71, 72, 73]
-target = 33
+target_num = 33
 
 if __name__ == '__main__':
-    print(binarySearch(arr, target))
+    print(binarySearch(arr, target_num))
