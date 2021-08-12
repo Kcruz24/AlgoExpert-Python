@@ -1,0 +1,27 @@
+Sample input:
+tree =         1
+            /    \
+           2      3
+          / \    / \
+         4   5  6   7
+        / \
+       8   9
+
+Sample output:
+16
+// The depth of the node with value 2 is 1.
+// The depth of the node with value 3 is 1.
+// The depth of the node with value 4 is 2.
+// The depth of the node with value 5 is 2.
+// The depth of the node with value 6 is 2.
+// The depth of the node with value 7 is 2.
+// The depth of the node with value 8 is 3.
+// The depth of the node with value 9 is 3.
+// The sum of all depths equals to 16
+
+
+Steps before code:
+    Initialize a current_depth_sum variable, then do a dfs and on each
+    iteration calculate the depth of the node and add that value to the
+    current_depth_sum variable. At the end of the dfs,
+    return the current_depth_sum variable.
