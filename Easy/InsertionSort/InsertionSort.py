@@ -1,7 +1,5 @@
 def swap(idx_one, idx_two, array):
-    temp = array[idx_one]
-    array[idx_one] = array[idx_two]
-    array[idx_two] = temp
+    array[idx_one], array[idx_two] = array[idx_two], array[idx_one]
 
 
 # O(N^2) time | O(1) space
