@@ -1,0 +1,31 @@
+sample input:
+array = [8, 5, 2, 9, 5, 6, 3]
+
+sample output:
+[2, 3, 5, 5, 6, 8, 9]
+
+
+
+steps before code:
+    1. Initialize a "sorted_idx" variable as the first element in
+       the input array.
+    2. Initialize an "unsorted_idx" variable as the "sorted_idx" + 1.
+    3. start a for loop for the array
+    4. compare the "sorted_idx" and "unsorted_idx" variables, if the
+       "unsorted_idx" is less than the "sorted_idx" variable, swap them.
+    5. if the "sorted_idx" part is greater than 1 elem, keep comparing and
+       swapping if necessary.
+    6. Loop again until the array is sorted.
+
+
+steps after solution code:
+    1. start a for loop from the second element in the input array.
+    2. Initialize an "unsorted_value" variable and set it equal the for loop
+       variable.
+    3. Run a while loop while "unsorted_value" is greater than 0 and
+       array[unsorted_value] is less than array[unsorted_value - 1]
+    4. On each while loop iteration:
+       1. swap the "unsorted_value" with the "unsorted_value" - 1
+       2. decrease the "unsorted_value" variable by 1
+
+    Finally, when the for loop ends, return the sorted array.
