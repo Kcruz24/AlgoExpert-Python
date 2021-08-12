@@ -45,5 +45,20 @@ def nodeDepthsIterative(root):
     return sum_of_depths
 
 
+# Algo Expert recursive approach
+# O(N) time | O(H) space - where N is the number of nodes and H is the height
+# of the tree.
+def nodeDepths(root, depth=0):
+    if root is None:
+        return 0
+
+    left_nodes = nodeDepths(root.left, depth + 1)
+    right_nodes = nodeDepths(root.right, depth + 1)
+
+    return depth + left_nodes + right_nodes
+
+
+tree = BinaryTree(1).insert([2, 3, 4, 5, 6, 7, 8, 9])
+
 if __name__ == '__main__':
     print(nodeDepths(tree))
