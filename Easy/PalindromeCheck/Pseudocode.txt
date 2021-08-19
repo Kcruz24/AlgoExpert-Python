@@ -1,0 +1,11 @@
+Sample input
+string = "abcdcba"
+
+Sample output
+true
+
+
+Steps before code:
+	1. Compare the given string with its reverse version
+	   using the slice python operator
+	
