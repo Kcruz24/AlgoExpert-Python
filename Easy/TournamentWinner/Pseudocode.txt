@@ -1,0 +1,20 @@
+Sample input
+competitions = [
+  ["HTML", "C#"],
+  ["C#", "Python"],
+  ["Python", "HTML"]
+]
+
+results = [0, 0, 1]
+
+Sample output
+"Python"
+
+
+Steps before code:
+	1. Create a hashmap for all the teams
+	2. Traverse the results list
+	3. If the current element is 0, look for the awayTeam that won in the hashmap
+	   and add 3 to the value. If the element is 1, then add 3 to the homeTeam in
+	   the hashmap.
+	4. Output the team with most points in the hashmap
