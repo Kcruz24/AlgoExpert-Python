@@ -1,0 +1,22 @@
+Sample input
+	redShirtHeights = [5, 8, 1, 3, 4]
+	blueShirtHeights = [6, 9, 2, 4, 5]
+	
+Sample output
+	true
+	
+
+	
+Steps before code:
+	1. Loop through the length of one of the arrays
+	2. at each iteration compare the height of the blue shirt position with the height of the corresponding red shirt position
+	3. If all of the heights in the back row are taller, return true, otherwise return false
+	
+
+Steps after code:
+	1. Sort both arrays in descending order
+	2. Determine what shirt color is going to be in the first row
+	3. loop through the length of one of the arrays
+	4. at each iteration check who's in the first row
+	5. then return false if the shirt on the first row is taller or equal to the shirt on the back row
+	6. if the loop ends without any problems, return True
