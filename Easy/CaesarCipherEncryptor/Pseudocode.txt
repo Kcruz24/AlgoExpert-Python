@@ -1,0 +1,14 @@
+Sample input
+string = "xyz"
+key = 2
+
+Sample output
+"zab"
+
+
+Steps before code:
+	1. Create an alphabet variable that will contain all the alphabet letters.
+	2. Get the index of each letter in the given string
+	3. Sum those indexes with the value of key.
+	4. Using the modulo operator I will retrieve the correct later based on the number of shifts made by the key.
+	5. Output the encrypted message.
