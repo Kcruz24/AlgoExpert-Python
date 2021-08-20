@@ -1,0 +1,14 @@
+Sample input
+	string = "AAAAAAAAAAAAABBCCCCDD"
+	
+Sample output
+	"9A4A2B4C2D"
+	
+	
+Steps before code:
+	1. declare a variable that will store the result
+	2. declare a counter variable to count the current length
+	2. loop through the given string
+	3. count the duplicate chars
+	4. if the count is greater than 9, encode the current char and add it to the encode variable
+	5. when the loop is done, return the encoded variable
