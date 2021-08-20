@@ -1,0 +1,21 @@
+Sample input
+	characters = "Bste!hetsi ogEAxpelrt x "
+	document = "AlgoExpert is the Best!"
+	
+Sample Output
+	true
+	
+
+	
+Steps before code:
+	1. Create a set of the characters to eliminate duplicates
+	2. Run a loop through the newly created set
+	2. at each iteration, check the frequency of the current character in both, the document and characters array.
+	3. If the frequency is equal, keep looping, otherwise return false.
+
+
+Steps after code:
+	1. create two dictionaries to keep track of the frequency of every char in the document and characters array.
+	2. loop through the document array
+	3. at each iteration return false if the current char in the document is not in the characters array or if the frequency of the current char in the characters array is less than the frequency of the current char in the document array.
+	
