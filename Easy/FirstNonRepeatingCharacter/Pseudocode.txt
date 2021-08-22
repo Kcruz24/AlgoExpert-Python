@@ -1,0 +1,12 @@
+Sample input
+	string = "abcdcaf"
+	
+Sample output
+	1 // The index of "b" because is the first non repeating character
+	
+	
+Steps:
+	1. Create a hash table to keep track of the characters frequencies in the input string
+	2. Run a loop through the input string
+	3. at each iteration, check if the current character value in the hash table is equal to 1
+	4. If its equal to 1, return the current index in the input string, otherwise return -1
