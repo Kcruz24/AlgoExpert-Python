@@ -1,0 +1,31 @@
+Sample input
+	array = [141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7]
+	
+Sample output
+	[18, 141, 541]
+	
+
+	
+I would create an array to store the largest numbers, then 
+I would start asigning the first number of the array as the largest number,
+then I would add the second and check if its greater than the number already in my helper array, if its greater I would swap them, if not then the new number would stay in the same place. Keep repeating tha process until the loop ends going through the array.
+	
+	
+
+Steps before code:
+	1. Create an array to store the largest numbers
+	2. Run a loop through the array
+	3. Add the first number in the array as the largest number in the new array.
+	4. From the second number onwards, add them to the helper array
+	5. Compare the array number with the numbers inside the helper array
+	6. If the new number is greater than any of the numbers inside the helper array, swap them to the corresponding places.
+	7. When the loop ends, the helper array should have the three largest numbers so I would output that result.
+	
+
+Steps after code:
+	1. Create an array to store the three largest numbers
+	2. Sort the array
+	3. run a loop through the input array
+	4. at each iteration check if the current num in the input array is greater than the first number in the helper array and if is not in the helper array
+	5. if that statement is true, then pop the first number in the helper array and insert at that position the current number in the input array, then sort the helper array
+	6. When the loop ends, return the helper array
