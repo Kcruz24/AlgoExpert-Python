@@ -1,0 +1,14 @@
+Sample input
+	array = [8, 5, 2, 9, 5, 6, 3]
+	
+Sample output
+	[2, 3, 5, 5, 6, 8, 9]
+	
+	
+
+	
+Steps before code:
+	1. run a nested for loop
+	2. at each iteration inside the inner loop, check if the value at the index of the outer loop is greater than the value at the index of the inner loop.
+	3. if is greater, swap them.
+	4. output the newly sorted input array
