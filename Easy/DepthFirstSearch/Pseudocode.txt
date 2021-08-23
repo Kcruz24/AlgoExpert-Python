@@ -1,0 +1,17 @@
+Sample input
+	graph = A
+		 /	|  \
+		B	C	D
+	   / \	   / \
+	  E	  F	  G	  H
+	  	 / \   \
+		I	J	K
+
+Sample output
+	["A", "B", "E", "F", "I", "J", "C", "D", "G", "K", "H"]
+	
+	
+Steps:
+	1. append the node's name to the input array (empty)
+	2. then, for each child in the tree, run depthFirstSearch and pass the input array
+	3. Return the input array
