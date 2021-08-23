@@ -1,0 +1,17 @@
+Sample input
+	redShirtSpeeds = [5, 5, 3, 9, 2]
+	blueShirtSpeeds = [3, 6, 7, 2, 1]
+	fastest = true
+	
+Sample output
+	32
+	
+
+Steps before code:
+	1. Declare a variable to store the total speed
+	2. Start a loop that will continue until one of the arrays is empty
+	3. at each iteration pair the maximum rider with red shirt with the minimum rider with blue shirt if the fastest param 
+	   is true, otherwise get the maximum rider with blue shirt
+	4. get the max value out of those two riders and add it to the total speed variable
+	5. pop the chosen riders
+	6. at the end of the loop, output the total speed
