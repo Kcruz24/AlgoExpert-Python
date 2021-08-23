@@ -1,0 +1,14 @@
+Sample input
+	array = [8, 5, 2, 9, 5, 6, 3]
+	
+Sample output
+	[2, 3, 5, 5, 6, 8, 9]
+	
+	
+	
+	
+Steps before code:
+	1. Run a nested for loop
+	2. at each iteration in the inner loop, find the smallest number starting from the index of the outer loop + 1
+	3. Compare that number with the value at the index of the outer loop, if the number is greater than the smallest number, swap them
+	4. output the newly sorted array
