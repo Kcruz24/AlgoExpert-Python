@@ -1,0 +1,31 @@
+Sample input
+	array = [1, 2, 3, 5, 6, 8, 9]
+	
+Sample output
+	[1, 4, 9, 25, 36, 64, 81]
+	
+	
+
+	
+Steps before code:
+	1. apply a square root method to every number in the input array.
+	2. return the array
+	
+	
+Steps after code:
+	1. declare a helper array to store the new values
+	2. multiply every number in the input array by itself
+	3. add the result to the helper array
+	4. sort the helper array
+	5. return the helper array
+	
+
+Steps after code(optimal):
+	1. initialize a helper array with the size of the given array with all the values equal to 0
+	2. create a start variable with the value of 0, an end variable with the value of the last index in the input array, and
+	   an idx variable to go through the helper array backwards
+	3. Create a while loop that will run until the end variable is bigger than the start variable
+	4. inside the loop check if the absolute value of the start index in the input array is greater than the absolute value of the end index in the input array, if its true, then add the squared value of that number to the helper array at its corresponding index
+	5. Repeat step 4 but viceversa, instead of the value of the start index, check if the value of the end index is greater.
+	6. When the loop ends, add the squared value of the last value that left to the helper array.
+	7. return the helper array
