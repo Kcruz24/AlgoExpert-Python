@@ -1,0 +1,31 @@
+Sample input
+    array = [5, 2, [7, -1], 3, [6, [-13, 8], 4]]
+
+Sample output
+    12
+
+5 + 2 + 2(7 - 1) + 3 + 2(6 + 3(-13 + 8) + 4)
+7 + 12 + 3 + 2(6 - 15 + 4)
+7 + 12 + 3 - 10
+12
+
+[8, [3, 4]]
+
+Steps before code:
+    1. Initialize a variable to track the level of depth and another to store
+       the sum.
+    2. Go through the given array and sum the values, when a "special" array
+       is detected, call the function again
+    3. When going back from the call stack, multiply the level of depth with
+       the current sum
+    4. return the product sum
+
+
+Steps after code:
+    1. Create a second parameter to track the level of depths
+    2. Initialize a sum varialbe to store the product sum
+    3. Go through each element in the given array
+    4. If the element is an integer, add it to the sum variable, otherwise
+       call the function, pass in the element, increase by one the level
+       of depth and then add it to the sum variable
+    5. When the loop ends, return the current sum times the level of depth.
