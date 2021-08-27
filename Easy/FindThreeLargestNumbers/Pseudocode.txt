@@ -24,8 +24,7 @@ Steps before code:
 
 Steps after code:
 	1. Create an array to store the three largest numbers
-	2. Sort the array
-	3. run a loop through the input array
-	4. at each iteration check if the current num in the input array is greater than the first number in the helper array and if is not in the helper array
-	5. if that statement is true, then pop the first number in the helper array and insert at that position the current number in the input array, then sort the helper array
-	6. When the loop ends, return the helper array
+	2. run a loop through the input array
+	3. at each iteration check if the current num in the input array is greater than the first number in the helper array and if is not in the helper array
+	4. if that statement is true, then pop the first number in the helper array and insert at that position the current number in the input array, then sort the helper array
+	5. When the loop ends, return the helper array
