@@ -14,5 +14,11 @@ Sample output
 	
 	
 	
-Steps before code:
+Steps after code (Recursive approach):
+	1. initialize a closest variable with float('inf')
+	2. set a base case that will stop when the current node hits a leaf node.
+	3. then compare the absolute value of the current node minus the target with the absolute value of the closest node value minus the target.
+	4. If the current node minus the target is less than the closest node minus the target then update the closest node value.
+	5. when the function hits the base case, return the closest node
+	6. at the end of the function, return the closest as well
 	
