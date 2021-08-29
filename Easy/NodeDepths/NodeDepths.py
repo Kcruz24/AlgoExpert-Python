@@ -51,11 +51,7 @@ def nodeDepthsIterative(root):
 def nodeDepths(root, depth=0):
     if root is None:
         return 0
-
-    left_nodes = nodeDepths(root.left, depth + 1)
-    right_nodes = nodeDepths(root.right, depth + 1)
-
-    return depth + left_nodes + right_nodes
+    return depth + nodeDepths(root.left, depth + 1) + nodeDepths(root.right, depth + 1)
 
 
 tree = BinaryTree(1).insert([2, 3, 4, 5, 6, 7, 8, 9])
