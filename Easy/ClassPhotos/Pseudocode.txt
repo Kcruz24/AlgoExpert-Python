@@ -14,9 +14,9 @@ Steps before code:
 	
 
 Steps after code:
-	1. Sort both arrays in descending order
-	2. Determine what shirt color is going to be in the first row
-	3. loop through the length of one of the arrays
-	4. at each iteration check who's in the first row
-	5. then return false if the shirt on the first row is taller or equal to the shirt on the back row
-	6. if the loop ends without any problems, return True
+	1. Sort both input arrays.
+	2. Check what student is the tallest of both rows
+	3. Set the row with the tallest student as the back row
+	4. Run a loop through the lenght of one of the arrays.
+	5. At each iteration, compare every student in the back row with those on the front row to verify that they are taller.
+	6. If the loop run successfuly, return true, otherwise return false.
