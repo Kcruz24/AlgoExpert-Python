@@ -25,3 +25,9 @@ Steps before code:
     iteration calculate the depth of the node and add that value to the
     current_depth_sum variable. At the end of the dfs,
     return the current_depth_sum variable.
+
+
+Steps after code (SOLUTION):
+    1. create a second parameter called "depth" to keep track of the level of depths
+    2. If the root is None, return 0
+    3. Return the depth + the sum of the depth on the right side of the tree and the sum of the depth on the left side of the tree.
