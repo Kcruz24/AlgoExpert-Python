@@ -1,10 +1,16 @@
-Pseudocode:
+(O(Nlog(N) SOLUTION):
+   1. initialize two pointers, one at the beginning and one at the end
+   2. sum up the pointer's elements
+   3. check if the result is equal to the targetSum
+   4. if equal, return the value of both pointers.
+   5. If the sum of the two pointer's elements is less than the targetSum,
+      increase the start pointer and repeat process 2 - 4.
+   6. If the sum of the two pointer's elements is greater than the targetSum,
+      decrease the end pointer and repeat process 2 - 4.
 
-1. initialize two pointers, one at the beginning and one at the end
-2. sum up the pointer's elements
-3. check if the result is equal to the targetSum
-4. if equal, return the value of both pointers.
-5. If the sum of the two pointer's elements is less than the targetSum,
-   increase the start pointer and repeat process 2 - 4.
-6. If the sum of the two pointer's elements is greater than the targetSum,
-   decrease the end pointer and repeat process 2 - 4.
+
+(O(N) SOLUTION):
+   1. create a set called "distinct_nums"
+   2. for each num in the array, calculate the potential_match by substracting the current num in the array from the targetSum (targetSum - num)
+   3. check if the current num is not in distinct_nums, if is not, the add the potential_match to distinct_nums, otherwise, return as a list the current num and the potential_match.
+   4. if the loop ends and no pair was found, return an empty list.

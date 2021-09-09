@@ -1,21 +1,30 @@
-# O(nlog(N)) time | O(1) space
-def twoNumberSum(array, target_sum):
+# O(N) time | O(N) space
+def twoNumberSum(array, targetSum):
+    distinct_nums = set()
+
+    for num in array:
+        potential_match = targetSum - num
+        if num not in distinct_nums:
+            distinct_nums.add(potential_match)
+        else:
+            return [num, potential_match]
+
+    return []
+
+
+# O(Nlog(N)) time | O(1) space
+def twoNumberSum(array, targetSum):
     array.sort()
+
     start = 0
-    end = len(array) - 1
-
+    end  = len(array) - 1
     while start < end:
-        start_value = array[start]
-        end_value = array[end]
-        current_sum = start_value + end_value
-
-        if current_sum == target_sum:
-            return [start_value, end_value]
-        elif current_sum > target_sum:
-            end -= 1
-        elif current_sum < target_sum:
+        if array[start] + array[end] < targetSum:
             start += 1
-
+        elif array[start] + array[end] > targetSum:
+            end -= 1
+        else:
+            return [array[start], array[end]]
     return []
 
 
