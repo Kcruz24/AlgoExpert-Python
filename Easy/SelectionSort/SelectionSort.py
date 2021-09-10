@@ -7,10 +7,10 @@ def selectionSort(array):
 			if array[j] < smallestNum:
 				smallestNum = array[j]
 				smallestNumIdx = j
-				
+
 		if array[i] > smallestNum:
 			swap(i, smallestNumIdx, array)
-			
+
 	return array
 
 
