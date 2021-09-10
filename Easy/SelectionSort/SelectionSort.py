@@ -12,3 +12,22 @@ def selectionSort(array):
 			swap(i, smallestNumIdx, array)
 			
 	return array
+
+
+# O(N^2) time | O(1) space - (2nd Solution)
+def insertionSort2(array):
+    for i in range(len(array)):
+        lowest = array[i]
+        lowestIdx = i
+        for j in range(i + 1, len(array)):
+            if array[j] < lowest:
+                lowest = array[j]
+                lowestIdx = j
+        swap(i, lowestIdx, array)
+
+    return array
+
+
+def swap(idx_one, idx_two, array):
+    array[idx_one], array[idx_two] = array[idx_two], array[idx_one]
+
