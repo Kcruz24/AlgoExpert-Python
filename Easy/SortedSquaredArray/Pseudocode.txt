@@ -29,3 +29,11 @@ Steps after code(optimal):
 	5. Repeat step 4 but viceversa, instead of the value of the start index, check if the value of the end index is greater.
 	6. When the loop ends, add the squared value of the last value that left to the helper array.
 	7. return the helper array
+
+
+Nov 30, 2021
+Steps:
+	1. Traverse through the input array
+    2. get the square root of every number
+    3. replace the result with the non squared number
+    4. output the array
