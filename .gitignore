@@ -1,3 +1,6 @@
 .idea
 practice.py
 PseudocodePractice.txt
+venv/
+__pycache__
+.DS_STORE
