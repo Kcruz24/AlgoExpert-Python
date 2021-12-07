@@ -1,0 +1,12 @@
+Steps:
+   1. Create two pointers, one for the current element,
+      and the other to search for the next greater element.
+   2. a nested loop will be implemented
+   3. the second loop will run until the second
+      pointer index its equal to the index of the first
+      pointer.
+   4. to avoid the out of bounds exception, I will be
+      updating the second pointer index with the modulo
+      operator by the length of the array.
+   5. Each time we find the next greater element, I'll add it
+      to a helper array, and if its not found, then I'll add a -1 to it.
