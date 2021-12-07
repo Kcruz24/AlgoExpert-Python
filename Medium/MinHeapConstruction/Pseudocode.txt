@@ -1,0 +1,82 @@
+[48, 12, 24, 7, 8, -5, 24, 391, 24, 56, 2, 6, 8, 41]
+
+
+                   8  
+              /         \
+             9          23
+          /       \    /   \
+         17       12  30    44
+       /   \      /
+      102   18  31
+
+
+
+left_child = 2i + 1
+right_child = 2i + 2
+parentNode = floor((i - 1) / 2)
+
+
+
+[8, 9, 23, 17, 12, 30, 44, 102, 18, 31]
+
+
+insert(9)
+
+Steps for insert:
+   1. append the value to the heap
+   2. then sift up the value until it is in its corresponding position.
+
+
+remove()
+
+Steps for remove:
+   1. swap the minimum root value with the last value in the heap
+   2. pop the minimum value out of the heap and store it in a variable
+   3. then sift down the just replaced value in order for the heap to meet
+      its characteristics.
+   3. return the removed value.
+
+
+peek()
+
+Steps for peek:
+   1. Return the root value
+
+
+siftUp()
+
+Steps for siftUp:
+   1. look at the parent node of the current node
+   2. run a loop while the parent node is greater than the current node.
+   3. swap the current node with the parent node while the loop keeps going.
+
+
+siftDown()
+
+Steps for siftDown:
+   1. Run a loop while the current node is greater than at least one of
+      its childs.
+   2. swap the parent node with the child with the minimum value.
+   3. keep going until the loop ends.
+
+
+buildHeap(array)
+
+Steps for buildHeap:
+   1. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
