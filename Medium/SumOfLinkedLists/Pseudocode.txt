@@ -1,0 +1,33 @@
+linkedListOne = 2 -> 4 -> 7 -> 1
+linkedListTWo = 9 -> 4 -> 5
+
+ 1  1
+ 1742
++ 549
+------
+   2 9 1
+
+
+sumLinkedList = 1 -> 9 -> 2 -> 2
+
+return sumLinkedList
+
+11
+
+13 % 10 = 3
+13 // 10 = 1
+
+sum = LinkedList(0)
+
+travOne = linkedListOne
+travTwo = linkedListTwo
+
+
+while travOne is not None and travTwo is not None:
+    
+    get_sum = (travOne.value + travTwo.value) % 10
+    carry_over = (travOne.value + travTwo.value) // 10
+
+    
+
+
