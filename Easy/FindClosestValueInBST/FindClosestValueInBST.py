@@ -23,21 +23,20 @@ def findClosestHelper(tree, target, closest):
 # Avg: O(log(N)) time | O(1) space
 # Worst: O(N) time | O(1) space
 def findClosestValueInBstIterative(tree, target):
-	closest = float('inf')
-	currentNode = tree
-	
-	while currentNode is not None:
-		if abs(target - closest) > abs(target - currentNode.value):
-			closest = currentNode.value
-		
-		if target < currentNode.value:
-			currentNode = currentNode.left
-		elif target > currentNode.value:
-			currentNode = currentNode.right
-		else:
-			break
-			
-	return closest
+    trav = tree
+    closest_val = tree.value 
+
+    while trav is not None:
+
+        if abs(trav.value - target) < abs(target - closest_val):
+            closest_val = trav.value
+
+        if target > trav.value:
+            trav = trav.right
+        else:
+            trav = trav.left
+
+    return closest_val
 	
 
 # This is the class of the input tree. Do not edit.
