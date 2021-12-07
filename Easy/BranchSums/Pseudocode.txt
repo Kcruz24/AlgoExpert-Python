@@ -1,18 +1,38 @@
-Did not even try to do it.
-
 Sample input:
-tree =        1
-            /   \
-          2      3
-        /  \    / \
-       4    5  6   7
-     / \    /
-    8  9  10
+    tree =        1
+                /   \
+              2      3
+            /  \    / \
+           4    5  6   7
+         / \    /
+        8  9  10
 
 Sample output:
-[15, 16, 18, 10, 11]
-// 15 == 1 + 2 + 4 + 8
-// 16 == 1 + 2 + 4 + 9
-// 18 == 1 + 2 + 5 + 10
-// 10 == 1 + 3 + 6
-// 11 == 1 + 3 + 7
+    [15, 16, 18, 10, 11]
+    // 15 == 1 + 2 + 4 + 8
+    // 16 == 1 + 2 + 4 + 9
+    // 18 == 1 + 2 + 5 + 10
+    // 10 == 1 + 3 + 6
+    // 11 == 1 + 3 + 7
+
+
+
+if node.left and node.right is None:
+    we are in a leaf node
+
+Steps:
+    Recursive helper function
+        1. create a helper function with two more parameters
+           to calculate the branch sums
+        2. One param to keep track of the running sum and another for the 
+        list to append them.
+        3. return if the root is none
+        4. add the root value to the running sum
+        5. if a leaf node has been reached, append the running sum to the list.
+        6. call again the helper function with the corresponding params
+           to keep traversing the tree in a depth-first search like fashion.
+
+    Base function
+        1. On the base branchSums function, create a sums list
+        2. call the calculate_branch_sums function with the root and sums as the args
+        3. return the sums list..

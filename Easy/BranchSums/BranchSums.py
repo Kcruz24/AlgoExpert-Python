@@ -1,4 +1,3 @@
-# This is the class of the input root. Do not edit it.
 class BinaryTree:
     def __init__(self, value):
         self.value = value
@@ -33,30 +32,32 @@ class BinaryTree:
         return order
 
 
-# Algo Expert Solution
 # O(N) time | O(N) space
 def branchSums(root):
     sums = []
-    calculate_branch_sums(root, 0, sums)
-
+    calculate_branch_sums(root, sums)
     return sums
 
+def calculate_branch_sums(node, sums, running_sum=0):
 
-def calculate_branch_sums(node, running_sum, sums):
     if node is None:
         return
 
-    new_running_sum = running_sum + node.value
+    running_sum += node.value
+
     if node.right is None and node.left is None:
-        sums.append(new_running_sum)
-        return
+        sums.append(running_sum)
 
-    calculate_branch_sums(node.left, new_running_sum, sums)
-    calculate_branch_sums(node.right, new_running_sum, sums)
+    calculate_branch_sums(node.left, sums, running_sum)
+    calculate_branch_sums(node.right, sums, running_sum)
 
 
-tree = BinaryTree(1).insert([2, 3, 4, 5, 6, 7, 8, 9, 10])
+if __name__ == '__main__':
+    tree = BinaryTree(1).insert([2, 3, 4, 5, 6, 7, 8, 9, 10])
 
-if __name__ == "__main__":
-    print(branchSums(tree))
     print(tree.inorder_traversal(tree))
+
+
+    print(branchSums(tree))
+    print(branchSums(tree) == [15, 16, 18, 10, 11])
+
