@@ -1,0 +1,33 @@
+
+
+
+Insert steps:
+   1. Check if the input node is greater than or equal to the current 
+      node.
+   2. If it's greater, go to the right path and then check if its null.
+   3. If it's null, then insert the input node, if it's not, repeat step 
+      one.
+   4. If the input node is less than the current node, go left.
+   5. If the left child node it's not null, insert the input node.
+   6. If it's not null, repeat step 1.
+
+
+Contains steps:
+   1. Traverse through the tree starting from the root node.
+   2. Check at every current node if the it's equal to the input node.
+   3. If it's not, go to the right if the input node is greater than or 
+      equal to the current node, or go to the left if the input node is less than the current node.
+   4. if the input node is not in the tree, return false, if it's found
+      return true.
+
+
+Remove steps:
+   1. Use part of the contains method to find the input node to remove.
+   2. When the node is found, check if the right node is null.
+   3. if it is, then replace it with the left child of the current node 
+      (node to remove).
+   4. if it's not null, then go to the right and check it's childrens, if 
+      it doesn't have any childs, then replace the current node with it's
+      right child node.
+   5. if the right child node of the current node has a left child, 
+      then grab the most left 
