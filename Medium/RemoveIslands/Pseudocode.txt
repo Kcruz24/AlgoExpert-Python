@@ -1,0 +1,13 @@
+Steps:
+   1. Start a loop to go through the matrix
+   2. Whenever we find a 1, we check if its on the border.
+   3. I it is on the border, then we check for its neighbors and add
+      1 to them aswell as the first 1 that we found.
+   4. if its not on the border, we simply do nothing.
+   5. After all the 1's that are not islands have been identified.
+   6. We then loop through the matrix again and this time around
+      we substract 1 to any number greater than 0.
+   7. return the array.
+
+
+O(wh) time | O(wh) space
