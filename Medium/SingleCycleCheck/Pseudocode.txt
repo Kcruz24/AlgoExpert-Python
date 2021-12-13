@@ -1,0 +1,11 @@
+Single Cycle Check
+
+Steps:
+	1. Initialize an array with same size as the input array filled
+	   with false values.
+	2. Loop through the array while the helper array has at least one false
+	   value or if the traversing pointer comes accross an already visited node.
+	3. To cycle through the array, I will sum the current node value with its 
+	   index and then use the modulo operator to wrap around the array
+	5. If the helper array has all true values, then return true, if not, return
+	   false
