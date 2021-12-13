@@ -28,6 +28,16 @@ while travOne is not None and travTwo is not None:
     get_sum = (travOne.value + travTwo.value) % 10
     carry_over = (travOne.value + travTwo.value) // 10
 
+Steps:
+   1. create a pointer for both linked lists
+   2. traverse while one of the pointers is not null or 
+      there is a carry over.
+   3. calculate the current value to add + the carry over
+   4. create a new node with the above result
+   5. add the new node to a new linked list
+   6. calculate the carry over
+   7. Return the newly created linked list
+
     
 
 
