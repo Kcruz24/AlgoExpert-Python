@@ -56,13 +56,6 @@ def sortedSquaredArray(array):
     return sortedSquares
 
 
-# Nov 30, 2021
-# O(NLog(N)) time | O(1) space
-def sortedSquaredArray(array):
-    for i in range(len(array)):
-        array[i] = abs(array[i] ** 2)
-    return sorted(array)
-
 array = [1, 2, 3, 5, 6, 8, 9]
 array2 = [-5, -4, -3, -2, -1]
 
