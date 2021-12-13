@@ -1,0 +1,17 @@
+Steps:
+	1. Create a copy of the matrix with all false values to
+	   keep track of the visited nodes.
+	2. Create an array to keep track of all the river sizes.
+	3. Loop through the matrix starting from the first position.
+	4. Initialize a running_sum variable to keep track of the current
+	   river size.
+	5. If I find a one, check if the node has already been visited,
+	   if not, then I'll do a DFS to see how bigh the river is and
+	   if the node has been visited I'll just keep looping through
+	   the matrix.
+	6. I'll then add one to the running sum for each connected one
+	   including the current river.
+	7. After the DFS has finished, I'll add the running sum to the 
+	   helper array and then I'll reset the value of the running sum
+	   to 0.
+	8. Return the river_sizes array.
