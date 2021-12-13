@@ -5,18 +5,15 @@ Sample output:
 	19 // [1, 3, -2, 3, 4, 7, 2, -9, 6, 3, 1]
 
 
-Steps before:
-	1. create a variable to keep track of the max sum and another to keep
-	   track of the running sum.
-	2. loop through the array and add each value to the running sum
-	3. if the current value is less than 0 and the running sum is less than
-	   or equal to 0, then set the running sum equal to 0
-	4. else if the current value is less than 0, then create a variable called
-	   lastSumBeforeNegative and set it to the sum of the running sum plus the
-	   absolute value of the current value
-	5. check if the lastSumBeforeNegative is greater than the max sum, if it 
-	   is, then set the max sum equal to the lastSumBeforeNegative
-	6. After the loop is finished, check if the latest value in the running 
-	   sum is greater than the max sum, if it is, then set the max sum 
-	   equal to the running sum
-	7. return the max sum
+Steps:
+   1. create two variables, one to get all the greatest 
+      sums, and another to keep track of the max 
+      subarray sum.
+   2. initialize the two variables with the first value of the input
+      array.
+   3. start a loop from the second position in the array
+   4. at each iteration, we use this formula max(max_ending_here + num, num) for
+      the variable that will get all the greatest sums (called max_ending_here).
+      and then use this formula max(max_sub_array_sum, max_ending_here) for the 
+      variable that will give us the max subarray sum.
+   5. When the loop ends, return the max_sub_array_sum variable.
