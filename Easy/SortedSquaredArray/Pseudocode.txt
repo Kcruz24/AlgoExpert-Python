@@ -30,10 +30,13 @@ Steps after code(optimal):
 	6. When the loop ends, add the squared value of the last value that left to the helper array.
 	7. return the helper array
 
-
-Nov 30, 2021
-Steps:
-	1. Traverse through the input array
-    2. get the square root of every number
-    3. replace the result with the non squared number
-    4. output the array
+Steps (Simpler):
+   1. Create an empty array of the same size as the input array
+   2. Initialize a startIdx and endIdx pointer.
+   3. while the startIdx pointer is less than or equal to the endIdx
+      1. Get the square root of both numbers at the corresponding
+         pointers positions.
+      2. Add the bigger one to the helper array
+      3. if the startIdx value was added, we add 1 to the startIdx
+      4. if it was the endIdx, we substract 1 to the endIdx
+   4. Return the helper array.

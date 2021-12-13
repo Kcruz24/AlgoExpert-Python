@@ -8,28 +8,31 @@ def sortedSquaredArray(array):
 	
 	
 # O(N) time | O(N) space
-def sortedSquaredArray2(array):
-	output = [0 for _ in array]
-	
-	start = 0
-	end = len(array) - 1
-	idx = len(output) - 1
-	
-	while start < end:
-		startVal = array[start]
-		endVal = array[end]
-		
-		if abs(startVal) > abs(endVal):
-			output[idx] = pow(startVal, 2)
-			start += 1
-		elif abs(endVal) > abs(startVal):
-			output[idx] = pow(endVal, 2)
-			end -= 1
-		
-		idx -= 1
-		
-	output[idx] = pow(array[start], 2)
-	return output
+def sortedSquaredArray(array):
+    sortedSquares = [0 for num in array]
+
+    startIdx = 0
+    endIdx = len(array) - 1
+    
+    lastSortedSquaredIdx = len(sortedSquares) - 1
+
+    while startIdx <= endIdx:
+        startVal = array[startIdx]
+        endVal = array[endIdx]
+
+        startSqrt = abs(startVal) ** 2
+        endSqrt = endVal ** 2
+
+        if startSqrt > endSqrt:
+            sortedSquares[lastSortedSquaredIdx] = startSqrt
+            startIdx += 1
+        else:
+            sortedSquares[lastSortedSquaredIdx] = endSqrt
+            endIdx -= 1
+
+        lastSortedSquaredIdx -= 1
+
+    return sortedSquares
 
 
 # Algo Expert
