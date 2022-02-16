@@ -45,11 +45,11 @@ class BinaryTree:
 
 
 # Attempt while seing the code walkthrough
+# O(N) time | O(log(N)) space
 def maxPathSum(tree):
 	return max(findMaxSum(tree))
 
-def findMaxSum(tree):
-
+def findMaxSum(tree: BinaryTree):
 	if tree is None:
 		return (0, float('-inf'))
 
@@ -63,8 +63,6 @@ def findMaxSum(tree):
 
 	max_path_sum_triangle = max(max_path_sum_branch, calculate_triangle) # 10 vs 16
 	running_max_path_sum = max(left_max_triangle_sum, right_max_triangle_sum, max_path_sum_triangle)
-
-	print((max_path_sum_branch, running_max_path_sum))
 
 	return (max_path_sum_branch, running_max_path_sum)
 
