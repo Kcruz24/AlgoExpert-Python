@@ -1,0 +1,5 @@
+Steps:
+   1. Check at each iteration if the left child is less than
+      or equal to the root value
+   2. and if the right child is strictly greater than the root value
+   3. If not, return false.
