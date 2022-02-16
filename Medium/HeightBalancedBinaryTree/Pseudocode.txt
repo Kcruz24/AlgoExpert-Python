@@ -1,0 +1,6 @@
+Steps:
+    1. Do a post order DFS
+    2. Check if the difference between the left and right
+       subtrees are less than or equal to 1
+    3. if the condition is met, then the tree is balanced, if is not, then
+       it is not balanced.
