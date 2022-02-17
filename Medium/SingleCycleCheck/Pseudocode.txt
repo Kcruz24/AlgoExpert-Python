@@ -1,11 +1,15 @@
 Single Cycle Check
 
+My Solution
 Steps:
-	1. Initialize an array with same size as the input array filled
-	   with false values.
-	2. Loop through the array while the helper array has at least one false
-	   value or if the traversing pointer comes accross an already visited node.
-	3. To cycle through the array, I will sum the current node value with its 
-	   index and then use the modulo operator to wrap around the array
-	5. If the helper array has all true values, then return true, if not, return
-	   false
+    1. Establish our initial idx as the next jump in the given array
+    2. Initialized an empty visited idx array
+    3. Loop through the array until we reach the end of the array
+    4. If the current idx is not in the visited idx array,
+       add it to the visited idx array and update the current idx to
+       the next jump in the array
+    5. If the current idx is in the visited idx array, return false
+    6. If the current idx is NOT in the visited idx array and length of the
+       visited idx array is equal to the length minus one of the input array
+       return true
+    7. if the loop ends, return False
