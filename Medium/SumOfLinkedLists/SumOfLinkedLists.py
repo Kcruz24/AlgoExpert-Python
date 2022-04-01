@@ -25,30 +25,29 @@ def getNodesInArray(output):
 # Algo Expert
 # O(max(N, M)) time | O(max(N, M)) space
 def sumOfLinkedLists(linkedListOne, linkedListTwo):
-    new_linked_list = LinkedList(0)
-    travNode = new_linked_list
+
+    result = LinkedList(0)
+    result_ptr = result
     carry_over = 0
 
-    node_one = linkedListOne
-    node_two = linkedListTwo
-    while node_one is not None or node_two is not None or carry_over != 0:
-        value_one = node_one.value if node_one is not None else 0
-        value_two = node_two.value if node_two is not None else 0
+    while linkedListOne is not None or linkedListTwo is not None or carry_over != 0:
+        value_one = linkedListOne.value if linkedListOne is not None else 0
+        value_two = linkedListTwo.value if linkedListTwo is not None else 0
 
         sum_of_values = value_one + value_two + carry_over
 
-        new_value = sum_of_values % 10
-        new_node = LinkedList(new_value)
+        remainder = sum_of_values % 10
 
-        travNode.next = new_node
-        travNode = new_node
+        new_linked_list = LinkedList(remainder)
+        result_ptr.next = new_linked_list
 
         carry_over = sum_of_values // 10
 
-        node_one = node_one.next if node_one is not None else None
-        node_two = node_two.next if node_two is not None else None
+        linkedListOne = linkedListOne.next if linkedListOne is not None else None
+        linkedListTwo = linkedListTwo.next if linkedListTwo is not None else None
+        result_ptr = result_ptr.next
 
-    return new_linked_list.next
+    return result.next
 
 
 if __name__ == '__main__':
