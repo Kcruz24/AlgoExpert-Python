@@ -1,7 +1,5 @@
 .idea
-practice.py
-practice2.py
-PseudocodePractice.txt
+practice/
 venv/
 __pycache__
 .DS_STORE
