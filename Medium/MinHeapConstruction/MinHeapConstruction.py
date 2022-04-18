@@ -4,68 +4,88 @@
 class MinHeap:
     def __init__(self, array):
         # Do not edit the line below.
-        #self.heap = self.buildHeap(array)
-        self.heap = array
+        self.heap = self.buildHeap(array)
 
+    # O(N) time | O(1) space
     def buildHeap(self, array):
-        # Write your code here.
-        pass
+        last_idx = len(array) - 1
+        first_parent_idx = (last_idx - 1) // 2
 
-    def siftDown(self):
-        # Write your code here.
-        pass
+        for parent in reversed(range(first_parent_idx + 1)):
+            self.siftDown(parent, last_idx, array)
 
-    def siftUp(self, cur_idx, heap):
-        # Write your code here.
-        parent_idx = (cur_idx - 1) // 2
-        while cur_idx > 0 and heap[parent_idx] > heap[cur_idx]:
-            self.swap(cur_idx, parent_idx, heap)
-            cur_idx = parent_idx
-            parent_idx = (cur_idx - 1) // 2
+        return array
 
+    # O(log(N)) time | O(1) space
+    def siftDown(self, curr_idx, end_idx, heap):
+        child_one_idx = 2 * curr_idx + 1
+
+        while child_one_idx <= end_idx:
+            child_two_calc = 2 * curr_idx + 2
+            child_two_idx = child_two_calc if child_two_calc <= end_idx else -1
+
+            child_one_val = heap[child_one_idx]
+            child_two_val = heap[child_two_idx]
+            # if there is a second child
+            if child_two_idx != -1 and child_two_val < child_one_val:
+                idx_to_swap = child_two_idx
+            else:
+                idx_to_swap = child_one_idx
+            
+            if heap[idx_to_swap] < heap[curr_idx]:
+                self.swap(idx_to_swap, curr_idx, heap)
+                curr_idx = idx_to_swap
+                child_one_idx = 2 * curr_idx + 1  # Update first child
+
+            else:
+                return
+
+    # O(log(N)) time | O(1) space
+    def siftUp(self, curr_idx, heap):
+        parent_idx = (curr_idx - 1) // 2
+        parent_val = heap[parent_idx]
+        curr_val = heap[curr_idx]
+
+        while curr_idx > 0 and curr_val < parent_val:
+            self.swap(curr_idx, parent_idx, self.heap)
+
+            curr_idx = parent_idx
+            parent_idx = (curr_idx - 1) // 2
+            parent_val = heap[parent_idx]
+            curr_val = heap[curr_idx]
+
+    # O(1) time | O(1) space
     def peek(self):
-        # Write your code here.
         return self.heap[0]
-        
 
+    # O(log(N)) time | O(1) space
     def remove(self):
-        # Write your code here.
-        return
+        last_idx = len(self.heap) - 1
+        self.swap(0, last_idx, self.heap)
+        value_to_remove = self.heap.pop()
 
+        self.siftDown(0, len(self.heap) - 1, self.heap)
+
+        return value_to_remove
+
+    # O(log(N)) time | O(1) space
     def insert(self, value):
-        # Write your code here.
         self.heap.append(value)
-        self.siftUp(len(self.heap) - 1, self.heap)
+        last_idx = len(self.heap) - 1
+        self.siftUp(last_idx, self.heap)
 
     def swap(self, idx_one, idx_two, heap):
         heap[idx_one], heap[idx_two] = heap[idx_two], heap[idx_one]
 
-    def toString(self):
-        print(self.heap)
-
-
-
+    def print_heap(self):
+        print('Min Heap:', self.heap)
 
 
 if __name__ == '__main__':
-    array = [8, 12, 23, 17, 31, 30, 44, 102, 18]
+    array = [48, 12, 24, 7, 8, -5, 24, 391, 24, 56, 2, 6, 8, 41]
 
-    min_heap = MinHeap(array)
+    heap = MinHeap(array)
 
-    min_heap.toString()
-
-    min_heap.insert(9)
-
-    min_heap.toString()
-
-    min_heap.insert(5)
-
-    min_heap.toString()
-
-
-
-
-
-
-
-
+    heap.print_heap()
+    heap.insert(76)
+    heap.print_heap()
