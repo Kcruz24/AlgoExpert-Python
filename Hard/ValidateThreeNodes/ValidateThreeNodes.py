@@ -5,23 +5,25 @@ class BST:
         self.left = left
         self.right = right
 
-# AlgoExpert Solution 2
-# O(H) time | O(1) space
+# O(D) time | O(1) space - Where "D" is the distance between nodeOne and nodeThree
 def validateThreeNodes(nodeOne, nodeTwo, nodeThree):
-    if isAncestor(nodeOne, nodeTwo):
-        return isAncestor(nodeTwo, nodeThree)
+    isNodeOneAncestor = isAncestor(
+        nodeOne, nodeTwo) and isAncestor(nodeTwo, nodeThree)
+    isNodeThreeAncestor = isAncestor(
+        nodeThree, nodeTwo) and isAncestor(nodeTwo, nodeOne)
 
-    if isAncestor(nodeThree, nodeTwo):
-        return isAncestor(nodeTwo, nodeOne)
+    return isNodeOneAncestor or isNodeThreeAncestor
+
+def isAncestor(ancestor, descendant):
+    while ancestor:
+        if descendant.value < ancestor.value:
+            ancestor = ancestor.left
+        elif descendant.value > ancestor.value:
+            ancestor = ancestor.right
+        else:
+            return True
 
     return False
-
-
-def isAncestor(ancestorNode, targetNode):
-    while ancestorNode is not None and ancestorNode is not targetNode:
-        ancestorNode = ancestorNode.left if targetNode.value > ancestorNode.value else ancestorNode.right
-
-    return ancestorNode is targetNode
 
 
 if __name__ == '__main__':
