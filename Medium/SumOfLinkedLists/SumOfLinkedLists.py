@@ -22,7 +22,7 @@ def getNodesInArray(output):
     return nodes
 
 
-# Algo Expert
+
 # O(max(N, M)) time | O(max(N, M)) space
 def sumOfLinkedLists(linkedListOne, linkedListTwo):
 
@@ -30,7 +30,7 @@ def sumOfLinkedLists(linkedListOne, linkedListTwo):
     result_ptr = result
     carry_over = 0
 
-    while linkedListOne is not None or linkedListTwo is not None or carry_over != 0:
+    while linkedListOne or linkedListTwo or carry_over:
         value_one = linkedListOne.value if linkedListOne is not None else 0
         value_two = linkedListTwo.value if linkedListTwo is not None else 0
 
