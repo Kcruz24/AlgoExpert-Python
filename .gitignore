@@ -1,5 +1,8 @@
 .idea
 practice/
+mocks/
 venv/
 __pycache__
 .DS_STORE
+Bloomberg program examples/
+Bloomberg Accelerator/
