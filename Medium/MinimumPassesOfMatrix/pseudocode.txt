@@ -1,0 +1,13 @@
+Clarifying Questions:
+- What would happen if a 0 if an adjacent element?
+- Can I get an empty matrix?
+- Will the matrix be always the same width and height?
+
+Edge Cases:
+- What would happen if the input is all 0?
+- What would happen when all of them are negative values?
+- What would happen when all of them are positive values?
+
+
+Steps:
+    1. 
