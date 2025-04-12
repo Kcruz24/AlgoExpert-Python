@@ -32,6 +32,23 @@ def hasSingleCycle2(array):
 
     return False
 
+# My Solution - Simplified
+# O(N) Time | O(N) Space
+def hasSingleCycle(array):
+    seen = [False for _ in array]
+    size = len(array)
+
+    idx = 0
+    for _ in range(size):
+        idx = getNextIdx(idx, array)
+
+        if seen[idx] == True:
+            return False
+
+        seen[idx] = True
+
+    return True
+
 
 def getNextIdx(cur_idx, array):
 	return (array[cur_idx] + cur_idx) % len(array)
